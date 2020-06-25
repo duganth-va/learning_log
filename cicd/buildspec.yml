@@ -15,9 +15,11 @@ phases:
       - echo Build started on `date`
       - docker build --pull -t learning_log:$CODEBUILD_RESOLVED_SOURCE_VERSION --file docker/Dockerfile .
       - docker tag learning_log:$CODEBUILD_RESOLVED_SOURCE_VERSION $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/learning_log:$CODEBUILD_RESOLVED_SOURCE_VERSION
+      - docker tag learning_log:$CODEBUILD_RESOLVED_SOURCE_VERSION $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/learning_log:prod
   post_build:
     commands:
       - docker images
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/learning_log:$CODEBUILD_RESOLVED_SOURCE_VERSION
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/learning_log:prod
