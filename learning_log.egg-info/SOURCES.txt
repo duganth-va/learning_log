@@ -1,0 +1,12 @@
+README.md
+setup.py
+learning_log/__init__.py
+learning_log/asgi.py
+learning_log/settings.py
+learning_log/urls.py
+learning_log/wsgi.py
+learning_log.egg-info/PKG-INFO
+learning_log.egg-info/SOURCES.txt
+learning_log.egg-info/dependency_links.txt
+learning_log.egg-info/requires.txt
+learning_log.egg-info/top_level.txt
