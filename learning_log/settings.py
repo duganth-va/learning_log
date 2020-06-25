@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "z#=0+q%n*qyhy1ilhb&m&ctlz4)w%%4#b02j-#wi8cl4#gj%$@"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["learning-log-ecs-lb-1533204159.us-gov-west-1.elb.amazonaws.com"]
 
